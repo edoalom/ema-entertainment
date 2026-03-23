@@ -293,4 +293,434 @@ Se i tuoi bambini non lo hanno ancora visto... e ora o mai piu per questo tour!
 
 ---
 
-*Piano creato il 22 marzo 2026 — EMA Entertainment Marketing*
+---
+
+## CONTENUTI SVILUPPATI PRONTI ALL'USO
+
+---
+
+### NEWSLETTER LANCIO — 23 marzo 2026
+
+**Oggetto A:** 🐱👢 Il Gatto con gli Stivali arriva a Milano — scegli il tuo spettacolo!
+**Oggetto B:** Il tuo weekend di maggio è già pieno? Dipende da te 🎭
+**Preheader:** 4 spettacoli, 2 giorni, una fiaba che non dimenticherete mai.
+
+---
+
+Ciao [Nome],
+
+abbiamo una notizia che farà felici i tuoi bambini (e anche te)!
+
+**Il Gatto con gli Stivali** — lo spettacolo che ha già conquistato migliaia di famiglie in tutta Italia — arriva al **Teatro Nazionale di Milano** per un weekend di pura magia.
+
+📅 **Sabato 9 maggio 2026** — ore 15:30 e 19:30
+📅 **Domenica 10 maggio 2026** — ore 10:30 e 15:30
+🎭 Teatro Nazionale, Piazza Piemonte 12, Milano
+
+Un'avventura coinvolgente, scenografie mozzafiato e la storia del Gatto più furbo del mondo pronti a prendere vita davanti ai tuoi occhi!
+
+**Perfetto per bambini dai 4 ai 10 anni.**
+
+🎟️ [ACQUISTA I BIGLIETTI ORA →]
+
+Hai una classe scolastica o un gruppo numeroso? Scrivici a [email] per le tariffe dedicate ai gruppi.
+
+A presto,
+EMA Entertainment
+
+---
+
+### EMAIL ALLE SCUOLE — 24 marzo 2026
+
+**Oggetto:** Proposta gita scolastica | Il Gatto con gli Stivali — Teatro Nazionale Milano, 10 maggio 2026
+
+---
+
+Gentile Referente Culturale,
+
+mi chiamo [Nome] e scrivo a nome di EMA Entertainment per proporvi un'opportunità unica per i vostri alunni.
+
+**Il Gatto con gli Stivali** è uno spettacolo teatrale di alto livello prodotto per le famiglie e le scuole, che porta sul palco la fiaba di Perrault con scenografie professionali, costumi originali e una regia pensata per catturare l'attenzione dei più piccoli.
+
+**Dettagli per le scuole:**
+- 📅 Domenica 10 maggio 2026, ore **10:30** (orario ideale per gite scolastiche)
+- 🎭 Teatro Nazionale, Piazza Piemonte 12, Milano
+- 👶 Età consigliata: 4-10 anni (scuola dell'infanzia e primaria)
+- 🎟️ **Tariffe gruppi** a partire da 15 bambini: prezzo dedicato su richiesta
+- 📞 Prenotazioni gruppi entro il **30 aprile 2026**
+
+Lo spettacolo ha durata di circa 60-70 minuti, pensata appositamente per mantenere alta l'attenzione dei bambini. Al termine è possibile organizzare un breve incontro con il cast su richiesta.
+
+Per informazioni sulle tariffe gruppi e per prenotare, vi chiediamo di contattarci:
+- Email: [email booking]
+- Tel: [numero]
+
+Allego la scheda tecnica dello spettacolo e il materiale didattico di supporto alla visita.
+
+Siamo a vostra disposizione per qualsiasi chiarimento.
+
+Cordiali saluti,
+[Nome] — EMA Entertainment
+
+---
+
+### STORIES SONDAGGIO INTERATTIVO — 25 marzo 2026
+
+**SLIDE 1**
+🎭 Una domanda per te!
+*[Sfondo giallo caldo, font bold]*
+Sticker: Countdown al 9 maggio
+
+**SLIDE 2**
+Hai mai portato i tuoi bambini a teatro? 🐱
+*[Sfondo verde bosco]*
+Sticker SONDAGGIO:
+✅ Sì, adorano il teatro!
+❌ No, non ancora!
+
+**SLIDE 3**
+E se vi dicessimo che il debutto perfetto è il 9 maggio a Milano? 👢✨
+*[Sfondo blu notte con stelle]*
+Testo piccolo: Teatro Nazionale | Il Gatto con gli Stivali
+
+**SLIDE 4**
+Qual è il vostro orario preferito? 🕐
+*[Sfondo arancione]*
+Sticker QUIZ a scelta multipla:
+🌞 Mattina (10:30)
+☀️ Pomeriggio (15:30)
+🌙 Sera (19:30)
+→ Usa i risultati per capire quali orari spingere di più negli ADS
+
+**SLIDE 5**
+🎟️ Scegli il tuo orario e prenota ora!
+*[Sfondo rosso con effetto spotlight]*
+Sticker LINK → pagina biglietti
+
+---
+
+### POST DIETRO LE QUINTE — 29 marzo 2026
+
+**Tipo di contenuto consigliato:** Carosello 5-7 foto (prove in scena, dettaglio costumi, backstage allestimento scene) oppure Reel breve 30 secondi con musica coinvolgente.
+
+**Caption:**
+
+🎭 Cosa succede dietro il sipario?
+
+Mentre voi aspettate il 9 maggio, noi siamo al lavoro per regalarvi uno spettacolo indimenticabile.
+
+Costumi cuciti a mano. Scene costruite pezzo per pezzo. Attori che provano ogni gesto fino alla perfezione.
+
+Tutto questo per far sì che quando le luci si accendono al Teatro Nazionale di Milano, la magia sia totale. ✨
+
+Il Gatto con gli Stivali non è solo uno spettacolo — è un mondo che prende vita.
+
+📅 9-10 maggio 2026 | Teatro Nazionale, Milano
+🎟️ Biglietti → link in bio
+
+Qual è il dettaglio che ti ha sorpreso di più? Dimmelo nei commenti 👇
+
+#Backstage #BehindTheScenes #IlGattoConGliStivali #TeatroNazionale #Milano #SpettacoloTeatro #MagiaDelTeatro #EMAEntertainment #TeatroPerBambini
+
+---
+
+### SCRIPT REEL — 7 aprile 2026
+
+**Durata:** 30-45 secondi
+**Audio consigliato:** versione orchestrale della colonna sonora originale, oppure trending audio family-friendly
+
+**Scene:**
+
+| Sec | Immagine | Testo overlay |
+|-----|----------|---------------|
+| 0-3 | Logo EMA + schermo nero | *"C'era una volta..."* |
+| 3-8 | Sipario che si apre | *"Il Gatto con gli Stivali"* (font gold su nero) |
+| 8-14 | Clip del Gatto in scena, costume completo | *"Lo spettacolo che tutta Italia ama"* |
+| 14-20 | Pubblico di bambini che ride/applaude | *"Milano, è il tuo turno 🎭"* |
+| 20-26 | Teatro Nazionale esterno o platea | *"9-10 maggio | Teatro Nazionale"* |
+| 26-30 | Biglietti animati + logo | *"Prenota ora → link in bio 🎟️"* |
+
+**Caption Reel:**
+
+🐱👢 Milano, vi aspettiamo!
+
+Il Gatto con gli Stivali arriva al Teatro Nazionale il 9 e 10 maggio. Un weekend di magia, risate e avventura per tutta la famiglia!
+
+🎟️ Biglietti disponibili → link in bio
+
+#Reel #IlGattoConGliStivali #Milano #TeatroNazionale #TeatroPerBambini #FamiglieMilano #EMAEntertainment
+
+---
+
+### POST SPETTACOLO 10:30 DOMENICA — 8 aprile 2026
+
+☀️ La domenica mattina non è mai stata così magica!
+
+Immagina: ti svegli, fai colazione con calma e alle 10:30 sei già nel cuore di una fiaba. 🐱✨
+
+📅 Domenica 10 maggio 2026 | ore 10:30
+🎭 Teatro Nazionale, Milano
+
+Lo spettacolo delle 10:30 è pensato per le famiglie che amano iniziare la domenica con energia — e per i bambini che non riescono ad aspettare che arrivi il pomeriggio!
+
+✅ Durata ~70 minuti
+✅ Fine alle 12:00 — tutta la giornata davanti a voi
+✅ Perfetto per bambini da 4 anni
+
+🎟️ Prenota il tuo posto domenicale → link in bio
+
+I biglietti per questo orario stanno andando veloce. Non rimandare! 👇
+
+#DomenicaATeatro #IlGattoConGliStivali #MilanoFamiglie #TeatroNazionale #BambiniMilano #DomenicaMattina #EMAEntertainment #WeekendConIBambini
+
+---
+
+### POST SPETTACOLO SERALE 19:30 — 13 aprile 2026
+
+🌙 Un sabato sera che i tuoi bambini non dimenticheranno mai.
+
+Niente divano, niente tablet. Sabato 9 maggio alle 19:30 il Teatro Nazionale di Milano si trasforma nel regno più affascinante che abbiate mai visto. 🎭👢
+
+Lo spettacolo serale di **Il Gatto con gli Stivali** è pensato per le famiglie con bambini un po' più grandi — quelli che riescono ad aspettare la sera, quelli che vogliono vivere la magia del teatro come si fa da grandi.
+
+📅 Sabato 9 maggio 2026 | ore 19:30
+🎭 Teatro Nazionale, Milano
+
+Dopo lo spettacolo? Una cena tutti insieme con ancora in testa le avventure del Marchese di Carabas. 🍝
+
+🎟️ I posti serali sono i più richiesti → prenota subito dal link in bio!
+
+#SabatoSeraATeatro #IlGattoConGliStivali #Milano #TeatroNazionale #FamigliaMilano #BambiniGrandi #SerataTeatro #EMAEntertainment
+
+---
+
+### NEWSLETTER PONTE 25 APRILE — 25 aprile 2026
+
+**Oggetto:** 🌸 Ponte del 25 aprile: cosa farete il 9-10 maggio?
+**Preheader:** Mancano 2 settimane. I posti si stanno esaurendo.
+
+---
+
+Ciao [Nome],
+
+il Ponte del 25 aprile è appena finito — e già si pensa al prossimo weekend lungo!
+
+Il weekend del **9-10 maggio** è l'occasione perfetta per regalare ai tuoi bambini un'esperienza che non dimenticheranno.
+
+**Il Gatto con gli Stivali** è al Teatro Nazionale di Milano per 4 spettacoli:
+
+| Giorno | Orario | Posti |
+|--------|--------|-------|
+| Sabato 9 maggio | 15:30 | ⚠️ Pochi rimasti |
+| Sabato 9 maggio | 19:30 | ⚠️ Pochi rimasti |
+| Domenica 10 maggio | 10:30 | Disponibile |
+| Domenica 10 maggio | 15:30 | ⚠️ Pochi rimasti |
+
+**Mancano solo 14 giorni.** Non aspettare che i tuoi orari preferiti vadano esauriti.
+
+🎟️ [ACQUISTA ORA — prima che sia tardi →]
+
+A presto,
+EMA Entertainment
+
+---
+
+### MESSAGGI WHATSAPP GRUPPI GENITORI
+
+**Versione breve:**
+🎭 Ciao a tutti! Segnalo che Il Gatto con gli Stivali sarà al Teatro Nazionale di Milano il 9 e 10 maggio. Spettacoli anche la mattina di domenica alle 10:30! Biglietti su [link]. 🐱👢
+
+**Versione elaborata:**
+🎭 Ciao a tutti!
+Volevo segnalare a chi ha bambini dai 4 anni in su: **Il Gatto con gli Stivali** arriva al Teatro Nazionale di Milano il 9 e 10 maggio 2026.
+
+Ci sono 4 spettacoli tra sabato e domenica:
+• Sab 9 maggio — ore 15:30 e 19:30
+• Dom 10 maggio — ore 10:30 e 15:30
+
+Noi ci siamo già organizzati e lo spettacolo sembra bellissimo! Se qualcuno vuole unirsi per andare insieme fatemelo sapere 😊
+
+🎟️ Biglietti: [link]
+I posti si stanno esaurendo per alcuni orari!
+
+---
+
+### DM/EMAIL INFLUENCER MILANESI — 3-4 aprile 2026
+
+**DM Instagram:**
+
+Ciao [Nome]! 👋
+
+Seguiamo il tuo profilo da un po' e adoriamo come racconti la vita di famiglia a Milano — i tuoi contenuti sono sempre autentici e coinvolgenti.
+
+Ti scriviamo da EMA Entertainment per una collaborazione su **Il Gatto con gli Stivali**, in scena al Teatro Nazionale di Milano il 9 e 10 maggio.
+
+Ti proponiamo:
+🎟️ 2 biglietti omaggio per te e il tuo bambino/a
+📸 In cambio di 1 post o 2-3 Stories sulla vostra esperienza (no script, solo autenticità!)
+
+Se ti interessa, rispondici qui o scrivici a [email]. Siamo felici di organizzare tutto nei dettagli!
+
+Grazie mille, speriamo di vederti presto in platea! 🐱👢
+
+— Team EMA Entertainment
+
+---
+
+**Email formale (per profili più strutturati con media kit):**
+
+Oggetto: Proposta collaborazione | Il Gatto con gli Stivali — Teatro Nazionale Milano
+
+Gentile [Nome],
+
+mi chiamo [Nome] e sono il responsabile marketing di EMA Entertainment.
+
+Abbiamo seguito con grande interesse il suo profilo e riteniamo che i valori della sua community — famiglia, qualità, esperienze autentiche — si allineino perfettamente con il nostro spettacolo.
+
+**La proposta:**
+- 2 biglietti omaggio (+ eventuali extra per il resto della famiglia) per una delle date di Milano (9-10 maggio 2026, Teatro Nazionale)
+- Nessuno script imposto: libero racconto autentico dell'esperienza
+- Contenuto atteso: 1 post feed + 2-3 Stories con menzione @emaentertainment e hashtag #IlGattoConGliStivali
+
+Siamo aperti a discutere ulteriori forme di collaborazione qualora fosse interessato/a.
+
+In allegato trova il press kit dello spettacolo con foto e materiale ad alta risoluzione.
+
+Rimango a disposizione per un confronto.
+
+Cordiali saluti,
+[Nome] — EMA Entertainment
+[email] | [telefono]
+
+---
+
+### COMUNICATO STAMPA — 6 aprile 2026
+
+**PER IMMEDIATA PUBBLICAZIONE**
+
+---
+
+**IL GATTO CON GLI STIVALI CONQUISTA MILANO: DUE GIORNI AL TEATRO NAZIONALE**
+
+*Lo spettacolo evento che ha già emozionato migliaia di famiglie in tutta Italia arriva nel capoluogo lombardo il 9 e 10 maggio 2026*
+
+**Milano, 6 aprile 2026** — EMA Entertainment annuncia l'arrivo a Milano di **Il Gatto con gli Stivali**, lo spettacolo teatrale che ha già conquistato il cuore di migliaia di famiglie italiane nel corso del tour nazionale.
+
+L'appuntamento è fissato per **sabato 9 e domenica 10 maggio 2026** presso il **Teatro Nazionale di Milano** (Piazza Piemonte 12), con quattro repliche che garantiscono la massima flessibilità per le famiglie: sabato alle ore 15:30 e 19:30, domenica alle ore 10:30 e 15:30.
+
+Lo spettacolo porta sul palco la celebre fiaba di Charles Perrault con un allestimento professionale di alto livello: scenografie originali, costumi artigianali, una regia dinamica pensata per coinvolgere il pubblico dai 4 anni in su e musiche dal vivo. La produzione unisce la tradizione della fiaba classica alla vivacità del teatro contemporaneo, regalando un'esperienza immersiva per grandi e piccoli.
+
+*"Volevamo portare al Teatro Nazionale di Milano uno spettacolo che fosse all'altezza di questa città e del suo pubblico"*, ha dichiarato [Nome Produttore], direttore artistico di EMA Entertainment. *"Il Gatto con gli Stivali è una storia universale, e noi l'abbiamo messa in scena con la cura che merita."*
+
+I biglietti sono disponibili su [piattaforma biglietteria] e presso la biglietteria del Teatro Nazionale. Per prenotazioni gruppi scolastici e aziendali: [email/telefono].
+
+**Scheda tecnica:**
+- Titolo: Il Gatto con gli Stivali
+- Produzione: EMA Entertainment
+- Date: 9-10 maggio 2026
+- Luogo: Teatro Nazionale, Piazza Piemonte 12, Milano
+- Orari: sab 15:30 e 19:30 | dom 10:30 e 15:30
+- Età consigliata: dai 4 anni
+- Durata: circa 70 minuti
+
+**Ufficio stampa EMA Entertainment**
+[Nome] | [email] | [telefono]
+
+---
+
+### STORIES COUNTDOWN GIORNALIERE — 4-8 maggio 2026
+
+**4 maggio — "Mancano 5 giorni"**
+🔴 LIVE: Mancano solo **5 GIORNI**!
+Il Gatto con gli Stivali | Teatro Nazionale Milano
+9-10 maggio 🎭
+Hai ancora i biglietti? → Link in bio
+*[Sticker countdown impostato al 9 maggio ore 15:30]*
+
+**5 maggio — "Mancano 4 giorni"**
+⏰ **4 giorni** e poi si alza il sipario!
+Sei pronto per la magia? 🐱✨
+Scorri per vedere quali orari hanno ancora posti...
+→ Swipe up / Link in bio
+*[Grafica con 4 orari e indicazione posti: pochi/disponibile]*
+
+**6 maggio — "Mancano 3 giorni" (con mappa)**
+📍 Sai già come arrivare?
+**Teatro Nazionale Milano**
+Piazza Piemonte 12 — MM1 Pagano o MM2 Cadorna
+🅿️ Parcheggio: [indicazioni]
+🚇 Tram: linee [X]
+Ci vediamo tra 3 giorni! 🎭
+*[Sticker "Aggiungi alla mappa" con posizione teatro]*
+
+**7 maggio — "Domani si comincia!"**
+🚨 DOMANI SI COMINCIA! 🚨
+Ultime ore per comprare i biglietti!
+Il Gatto con gli Stivali — Teatro Nazionale Milano
+🎟️ Link in bio — ULTIMI POSTI
+Siete pronti? ❤️👢🐱
+
+**8 maggio — "Domani TUTTO ESAURITO"**
+⚠️ Domani il teatro si riempie!
+Se hai ancora il biglietto... ci vediamo domani! 🎉
+Se non l'hai ancora preso... corri, potrebbero esserci ancora pochissimi posti dell'ultimo minuto!
+🎟️ Controlla su → link in bio
+*[Stories ogni 2-3 ore con aggiornamenti disponibilità]*
+
+---
+
+### POST MAPPA TEATRO NAZIONALE — 6 maggio 2026
+
+📍 Come raggiungere il Teatro Nazionale di Milano — tutto quello che ti serve!
+
+Mancano **3 giorni** allo spettacolo e vogliamo che il tuo arrivo a teatro sia senza stress. Ecco tutte le informazioni pratiche:
+
+🎭 **Teatro Nazionale**
+Piazza Piemonte 12, Milano
+
+🚇 **In metro:**
+Linea M1 (rossa) → fermata Pagano
+Linea M2 (verde) → fermata Cadorna, poi 10 minuti a piedi
+
+🚌 **In tram/bus:**
+Tram 16 e 27 | Bus 58 e 68 — fermata Piazza Piemonte
+
+🚗 **In auto:**
+Parcheggio consigliato: [nome parcheggio vicino]
+Attenzione: zona ATM — verificare area C
+
+🕐 **Consiglio:** Arrivate almeno 20-25 minuti prima per sistemare i bambini con calma e godervi l'atmosfera del teatro!
+
+Ci siete? Taggateci nelle Stories quando arrivate! 📸 @emaentertainment
+
+#TeatroNazionale #Milano #IlGattoConGliStivali #ComeCiArrivoATeatro #InformazioniPratiche #FamiglieMilano
+
+---
+
+### POST HYPE PRE-SHOW — 7 maggio 2026
+
+🎭 DOMANI SI ALZA IL SIPARIO.
+
+Dopo settimane di attesa, domani è finalmente il giorno.
+
+Il Gatto con gli Stivali sale sul palco del Teatro Nazionale di Milano. 🐱👢
+
+Per i bambini che lo aspettavano da mesi.
+Per i genitori che non vedono l'ora di vederli sorridere.
+Per chi ama il teatro e la magia delle storie.
+
+Domani sarà una giornata speciale. Promesso.
+
+📅 9 maggio — ore 15:30 e 19:30
+📅 10 maggio — ore 10:30 e 15:30
+🎭 Teatro Nazionale, Milano
+
+🎟️ Ultimi biglietti disponibili → link in bio. Dopo non ci sono rimpianti! 😉
+
+A domani, Milano. ❤️
+
+#EMAEntertainment #IlGattoConGliStivali #TeatroNazionale #Milano #DomaniATeatro #Hype #SpettacoloTeatro #FamiglieMilano
+
+---
+
+*Piano creato il 22 marzo 2026 — Contenuti sviluppati il 23 marzo 2026 — EMA Entertainment Marketing*
