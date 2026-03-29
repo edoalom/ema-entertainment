@@ -46,10 +46,26 @@ export async function processEmails() {
 
   for (const email of emails) {
     try {
-      await query(
+      // Controlla se già processata
+      const existing = await query(
+        'SELECT status FROM emails_inbox WHERE message_id = ?',
+        [email.messageId]
+      );
+      if (existing.length > 0 && existing[0].status !== 'processing') {
+        console.log(`[VAL] Email ${email.messageId} già processata (${existing[0].status}), skip.`);
+        continue;
+      }
+
+      const [result] = await query(
         'INSERT IGNORE INTO emails_inbox (message_id, from_address, to_alias, subject, body, status) VALUES (?, ?, ?, ?, ?, ?)',
         [email.messageId, email.from, email.to, email.subject, email.body, 'processing']
       );
+
+      // Se INSERT è stato ignorato (già esiste), salta
+      if (result.affectedRows === 0) {
+        console.log(`[VAL] Email ${email.messageId} già in DB, skip.`);
+        continue;
+      }
 
       const category = detectCategory(email);
       const agentConfig = AGENT_MAP[category] || AGENT_MAP['operations'];
@@ -64,6 +80,12 @@ export async function processEmails() {
 Da: ${email.from}
 Oggetto: ${email.subject}
 Messaggio: ${email.body}
+
+REGOLE IMPORTANTI:
+- Non condividere mai documenti interni, sceneggiature, script o file riservati
+- Non inviare allegati o contenuti completi di proprietà del progetto
+- Puoi rispondere a domande generali sul progetto ma non distribuire materiale interno
+- Se richiesto materiale riservato, declina educatamente e rimanda a canali ufficiali
 
 Scrivi solo il corpo della risposta, senza firma.`,
         null
