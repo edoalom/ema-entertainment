@@ -26,7 +26,8 @@ export async function fetchNewEmails() {
       return [];
     }
 
-    for await (const msg of client.fetch('1:5', { envelope: true, bodyParts: ['TEXT'] })) {
+    const start = Math.max(1, mailbox.exists - 4);
+    for await (const msg of client.fetch(`${start}:*`, { envelope: true, bodyParts: ['TEXT'] })) {
       try {
         let body = '';
         if (msg.bodyParts?.get('TEXT')) {
