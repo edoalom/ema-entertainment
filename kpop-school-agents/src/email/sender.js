@@ -12,13 +12,12 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-export async function sendEmail({ from, to, cc, subject, body, signature }) {
+export async function sendEmail({ from, to, subject, body, signature }) {
   const fullBody = signature ? `${body}\n\n${signature}` : body;
 
   const info = await transporter.sendMail({
     from: `${from} <${process.env.SMTP_USER}>`,
     to,
-    cc: cc || process.env.SMTP_USER,
     subject,
     text: fullBody
   });

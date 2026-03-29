@@ -74,7 +74,6 @@ Scrivi solo il corpo della risposta, senza firma.`,
       await sendEmail({
         from: agentConfig.name,
         to: email.from,
-        cc: process.env.EMAIL_USER,
         subject: `Re: ${email.subject}`,
         body: response.content,
         signature
