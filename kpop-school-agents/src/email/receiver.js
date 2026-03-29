@@ -26,7 +26,7 @@ export async function fetchNewEmails() {
       return [];
     }
 
-    for await (const msg of client.fetch({ seen: false }, { envelope: true, bodyParts: ['TEXT'] })) {
+    for await (const msg of client.fetch('1:5', { envelope: true, bodyParts: ['TEXT'] })) {
       try {
         let body = '';
         if (msg.bodyParts?.get('TEXT')) {
