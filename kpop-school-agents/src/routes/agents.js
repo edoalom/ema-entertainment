@@ -38,7 +38,16 @@ router.post('/:name', async (req, res) => {
 
 // GET /api/agents
 router.get('/', (req, res) => {
-  res.json({ agents: Object.keys(agents), total: Object.keys(agents).length });
+  res.json({
+    agents: [
+      { id: 'val',    role: 'Marketing & Communications Manager' },
+      { id: 'liv',    role: 'PR & Community Manager' },
+      { id: 'elena',  role: 'Story Editor & Character Developer' },
+      { id: 'giulia', role: 'Visual Director & Comic Producer' },
+      { id: 'tom',    role: 'Project Manager & Operations' }
+    ],
+    total: 5
+  });
 });
 
 export default router;
