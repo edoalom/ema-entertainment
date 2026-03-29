@@ -1,54 +1,37 @@
-import Pop3Command from 'poplib';
+import Pop3 from 'node-pop3';
 import dotenv from 'dotenv';
 dotenv.config();
 
 export async function fetchNewEmails() {
-  return new Promise((resolve, reject) => {
-    const emails = [];
-    const client = new Pop3Command(
-      parseInt(process.env.POP3_PORT || 995),
-      process.env.POP3_HOST || 'pop3.aruba.it',
-      { enabletls: true }
-    );
+  const pop3 = new Pop3({
+    user: process.env.EMAIL_USER,
+    password: process.env.EMAIL_PASSWORD,
+    host: process.env.POP3_HOST || 'pop3.aruba.it',
+    port: parseInt(process.env.POP3_PORT || 995),
+    tls: true,
+    timeout: 10000
+  });
 
-    client.on('error', (err) => {
-      console.error('[POP3] Errore connessione:', err.message);
-      reject(err);
-    });
+  const emails = [];
 
-    client.on('connect', () => {
-      console.log('[POP3] Connesso.');
-      client.login(process.env.EMAIL_USER, process.env.EMAIL_PASSWORD);
-    });
+  try {
+    await pop3.connect();
+    console.log('[POP3] Connesso e autenticato.');
 
-    client.on('login', (status) => {
-      if (!status) {
-        reject(new Error('POP3 login fallito'));
-        return;
-      }
-      console.log('[POP3] Login OK.');
-      client.list();
-    });
+    const list = await pop3.UIDL();
+    console.log(`[POP3] ${list.length} messaggi trovati.`);
 
-    client.on('list', (status, msgcount) => {
-      if (!status || msgcount === 0) {
-        console.log('[POP3] Nessun messaggio.');
-        client.quit();
-        resolve([]);
-        return;
-      }
-      console.log(`[POP3] ${msgcount} messaggi trovati.`);
-      // Prendi solo gli ultimi 10
-      const start = Math.max(1, msgcount - 9);
-      for (let i = start; i <= msgcount; i++) {
-        client.retr(i);
-      }
-    });
+    if (list.length === 0) {
+      await pop3.QUIT();
+      return [];
+    }
 
-    let pending = 0;
-    client.on('retr', (status, msgnumber, data) => {
-      if (status && data) {
-        const raw = data.toString();
+    // Prendi solo ultimi 10
+    const recent = list.slice(-10);
+
+    for (const [msgnum] of recent) {
+      try {
+        const raw = await pop3.RETR(msgnum);
         const lines = raw.split('\r\n');
 
         let from = '', to = '', subject = '', messageId = '';
@@ -65,24 +48,24 @@ export async function fetchNewEmails() {
         const body = lines.slice(bodyStart).join('\n').trim().substring(0, 2000);
 
         emails.push({
-          messageId: messageId || `msg-${Date.now()}-${msgnumber}`,
+          messageId: messageId || `msg-${Date.now()}-${msgnum}`,
           from, to, subject, body
         });
 
-        // Cancella dal server dopo lettura
-        client.dele(msgnumber);
+        // Cancella dal server
+        await pop3.DELE(msgnum);
+      } catch (err) {
+        console.warn(`[POP3] Errore messaggio ${msgnum}:`, err.message);
       }
-      pending--;
-      if (pending <= 0) client.quit();
-    });
+    }
 
-    client.on('quit', () => {
-      console.log(`[POP3] Disconnesso. ${emails.length} email recuperate.`);
-      resolve(emails);
-    });
+    await pop3.QUIT();
+    console.log(`[POP3] ${emails.length} email recuperate.`);
 
-    // Traccia messaggi pendenti
-    const origRetr = client.retr.bind(client);
-    client.retr = (n) => { pending++; origRetr(n); };
-  });
+  } catch (err) {
+    console.error('[POP3] Errore:', err.message);
+    throw err;
+  }
+
+  return emails;
 }
