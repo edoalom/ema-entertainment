@@ -18,7 +18,7 @@ export async function fetchNewEmails() {
     await pop3.connect();
     console.log('[POP3] Connesso e autenticato.');
 
-    const list = await pop3.UIDL();
+    const list = await pop3.LIST();
     console.log(`[POP3] ${list.length} messaggi trovati.`);
 
     if (list.length === 0) {
