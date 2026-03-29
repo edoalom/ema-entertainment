@@ -15,6 +15,7 @@ export async function fetchNewEmails() {
   });
 
   const emails = [];
+  const seenSeqs = [];
   await client.connect();
 
   const lock = await client.getMailboxLock('INBOX');
@@ -55,12 +56,17 @@ export async function fetchNewEmails() {
           body
         });
 
-        await client.messageFlagsAdd(msg.seq, ['\\Seen']);
-        console.log(`[IMAP] Email letta: ${msg.envelope.subject}`);
+        seenSeqs.push(msg.seq);
+        console.log(`[IMAP] Email raccolta: ${msg.envelope.subject}`);
 
       } catch (msgErr) {
         console.warn('[IMAP] Errore messaggio:', msgErr.message);
       }
+    }
+
+    // Marca come lette dopo aver completato il fetch
+    if (seenSeqs.length > 0) {
+      await client.messageFlagsAdd(seenSeqs.join(','), ['\\Seen']);
     }
   } finally {
     lock.release();
