@@ -2,8 +2,8 @@ import express from 'express';
 import { runTom } from '../agents/tom.js';
 import { runElena } from '../agents/elena.js';
 import { runGiulia } from '../agents/giulia.js';
-import { runVal } from '../agents/val.js';
 import { runLiv } from '../agents/liv.js';
+import { runVal } from '../agents/val.js';
 
 const router = express.Router();
 
@@ -11,8 +11,8 @@ const agents = {
   tom: runTom,
   elena: runElena,
   giulia: runGiulia,
-  val: runVal,
-  liv: runLiv
+  liv: runLiv,
+  val: runVal
 };
 
 // POST /api/agents/:name
@@ -36,12 +36,9 @@ router.post('/:name', async (req, res) => {
   }
 });
 
-// GET /api/agents — lista agenti disponibili
+// GET /api/agents
 router.get('/', (req, res) => {
-  res.json({
-    agents: Object.keys(agents),
-    total: Object.keys(agents).length
-  });
+  res.json({ agents: Object.keys(agents), total: Object.keys(agents).length });
 });
 
 export default router;
