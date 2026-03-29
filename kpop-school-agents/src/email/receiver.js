@@ -30,6 +30,7 @@ export async function fetchNewEmails() {
     const range = `${Math.max(1, mailbox.exists - 4)}:*`;
 
     for await (const msg of client.fetch(range, { envelope: true, source: true })) {
+      console.log('processing msg:', msg.seq);
       try {
         const raw = msg.source.toString();
         const lines = raw.split('\n');
