@@ -8,16 +8,23 @@ import { fetchNewEmails } from './receiver.js';
 import { query } from '../core/db.js';
 
 const AGENT_MAP = {
-  character_question: { agent: runElena, alias: 'elena', name: 'Elena' },
-  story_question:     { agent: runElena, alias: 'elena', name: 'Elena' },
-  visual_question:    { agent: runGiulia, alias: 'giulia', name: 'Giulia' },
-  music_question:     { agent: runTom, alias: 'tom', name: 'Tom' },
-  marketing_question: { agent: runVal, alias: 'val', name: 'Val' },
-  technical_question: { agent: runTom, alias: 'tom', name: 'Tom' },
-  community_question: { agent: runLiv, alias: 'liv', name: 'Liv' },
-  press_inquiry:      { agent: runLiv, alias: 'liv', name: 'Liv' },
-  project_management: { agent: runTom, alias: 'tom', name: 'Tom' },
+  story:     { agent: runElena, alias: 'elena', name: 'Elena' },
+  visual:    { agent: runGiulia, alias: 'giulia', name: 'Giulia' },
+  marketing: { agent: runVal, alias: 'val', name: 'Val' },
+  community: { agent: runLiv, alias: 'liv', name: 'Liv' },
+  press:     { agent: runLiv, alias: 'liv', name: 'Liv' },
+  operations:{ agent: runTom, alias: 'tom', name: 'Tom' },
 };
+
+function detectCategory(email) {
+  const text = `${email.subject} ${email.body}`.toLowerCase();
+  if (/personaggio|storia|dialogo|trama|episodio|sceneggiatura/.test(text)) return 'story';
+  if (/design|visual|colori|artwork|fumetto|immagine/.test(text)) return 'visual';
+  if (/social|marketing|newsletter|campagna|instagram|tiktok/.test(text)) return 'marketing';
+  if (/press|media|intervista|giornale|comunicato/.test(text)) return 'press';
+  if (/community|discord|fan|evento/.test(text)) return 'community';
+  return 'operations';
+}
 
 export async function processEmails() {
   console.log('[VAL] Controllo nuove email...');
@@ -26,7 +33,7 @@ export async function processEmails() {
   try {
     emails = await fetchNewEmails();
   } catch (err) {
-    console.error('[VAL] Errore POP3:', err.message);
+    console.error('[VAL] Errore fetch email:', err.message);
     return;
   }
 
@@ -39,46 +46,19 @@ export async function processEmails() {
 
   for (const email of emails) {
     try {
-      // Salva in inbox
       await query(
         'INSERT IGNORE INTO emails_inbox (message_id, from_address, to_alias, subject, body, status) VALUES (?, ?, ?, ?, ?, ?)',
         [email.messageId, email.from, email.to, email.subject, email.body, 'processing']
       );
 
-      // VAL categorizza
-      const categorization = await runVal(
-        `Categorizza questa email e rispondi SOLO con la categoria in formato JSON.
-Email da: ${email.from}
-Oggetto: ${email.subject}
-Corpo: ${email.body}
+      const category = detectCategory(email);
+      const agentConfig = AGENT_MAP[category] || AGENT_MAP['operations'];
 
-Rispondi SOLO con: {"category": "character_question|story_question|visual_question|music_question|marketing_question|technical_question|community_question|press_inquiry|project_management|escalation"}`,
-        null
-      );
-
-      let category = 'project_management';
-      try {
-        const parsed = JSON.parse(categorization.content.trim());
-        category = parsed.category || 'project_management';
-      } catch {
-        console.warn('[VAL] Categorizzazione fallita, uso default.');
-      }
-
-      // Aggiorna categoria
       await query(
         'UPDATE emails_inbox SET category = ?, assigned_agent = ? WHERE message_id = ?',
-        [category, AGENT_MAP[category]?.alias || 'tom', email.messageId]
+        [category, agentConfig.alias, email.messageId]
       );
 
-      // Escalation a Edo
-      if (category === 'escalation') {
-        console.log(`[VAL] ESCALATION richiesta per email da ${email.from}`);
-        await query('UPDATE emails_inbox SET status = ? WHERE message_id = ?', ['escalated', email.messageId]);
-        continue;
-      }
-
-      // Genera risposta con agente corretto
-      const agentConfig = AGENT_MAP[category] || AGENT_MAP['project_management'];
       const response = await agentConfig.agent(
         `Rispondi a questa email in modo professionale e cordiale.
 Da: ${email.from}
@@ -89,10 +69,8 @@ Scrivi solo il corpo della risposta, senza firma.`,
         null
       );
 
-      // Firma agente
-      const signature = `-- ${agentConfig.name}\nK-Pop School: The Battle Team\ninfo@kpopschool.it`;
+      const signature = `-- ${agentConfig.name}\nK-Pop School: The Battle\n${agentConfig.alias}@kpopschool.it`;
 
-      // Invia risposta
       await sendEmail({
         from: agentConfig.name,
         to: email.from,
@@ -102,7 +80,6 @@ Scrivi solo il corpo della risposta, senza firma.`,
         signature
       });
 
-      // Salva outbox
       const [inbox] = await query('SELECT id FROM emails_inbox WHERE message_id = ?', [email.messageId]);
       if (inbox) {
         await query(
@@ -115,7 +92,7 @@ Scrivi solo il corpo della risposta, senza firma.`,
       console.log(`[VAL] Email da ${email.from} → ${agentConfig.name} → risposta inviata.`);
 
     } catch (err) {
-      console.error(`[VAL] Errore processing email ${email.messageId}:`, err.message);
+      console.error(`[VAL] Errore:`, err.message);
       await query('UPDATE emails_inbox SET status = ? WHERE message_id = ?', ['escalated', email.messageId]);
     }
   }
