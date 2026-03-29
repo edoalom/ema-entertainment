@@ -26,23 +26,36 @@ export async function fetchNewEmails() {
       return [];
     }
 
-    const start = Math.max(1, mailbox.exists - 4);
-    for await (const msg of client.fetch(`${start}:*`, { envelope: true, bodyParts: ['TEXT'] })) {
+    const range = `${Math.max(1, mailbox.exists - 4)}:*`;
+
+    for await (const msg of client.fetch(range, { envelope: true, source: true })) {
       try {
-        let body = '';
-        if (msg.bodyParts?.get('TEXT')) {
-          body = msg.bodyParts.get('TEXT').toString().substring(0, 2000);
+        const raw = msg.source.toString();
+        const lines = raw.split('\n');
+
+        let subject = '', from = '', to = '';
+        let bodyStart = 0;
+
+        for (let i = 0; i < lines.length; i++) {
+          if (lines[i].startsWith('Subject:')) subject = lines[i].replace('Subject:', '').trim();
+          if (lines[i].startsWith('From:')) from = lines[i].replace('From:', '').trim();
+          if (lines[i].startsWith('To:')) to = lines[i].replace('To:', '').trim();
+          if (lines[i].trim() === '') { bodyStart = i + 1; break; }
         }
 
+        const body = lines.slice(bodyStart).join('\n').trim().substring(0, 2000);
+
         emails.push({
-          messageId: msg.envelope.messageId || `msg-${Date.now()}`,
-          from: msg.envelope.from?.[0]?.address || '',
-          to: msg.envelope.to?.[0]?.address || '',
-          subject: msg.envelope.subject || '(nessun oggetto)',
+          messageId: msg.envelope.messageId || `msg-${Date.now()}-${msg.seq}`,
+          from: msg.envelope.from?.[0]?.address || from,
+          to: msg.envelope.to?.[0]?.address || to,
+          subject: msg.envelope.subject || subject,
           body
         });
 
         await client.messageFlagsAdd(msg.seq, ['\\Seen']);
+        console.log(`[IMAP] Email letta: ${msg.envelope.subject}`);
+
       } catch (msgErr) {
         console.warn('[IMAP] Errore messaggio:', msgErr.message);
       }
