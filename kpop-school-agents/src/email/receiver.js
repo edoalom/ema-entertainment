@@ -17,8 +17,9 @@ export async function fetchNewEmails() {
   const emails = [];
   await client.connect();
 
+  const lock = await client.getMailboxLock('INBOX');
   try {
-    const mailbox = await client.mailboxOpen('INBOX');
+    const mailbox = client.mailbox;
     console.log(`[IMAP] Mailbox aperta. Messaggi: ${mailbox.exists}`);
 
     if (mailbox.exists === 0) {
@@ -61,6 +62,7 @@ export async function fetchNewEmails() {
       }
     }
   } finally {
+    lock.release();
     await client.logout();
   }
 
