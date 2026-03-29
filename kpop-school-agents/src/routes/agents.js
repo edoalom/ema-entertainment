@@ -40,11 +40,11 @@ router.post('/:name', async (req, res) => {
 router.get('/', (req, res) => {
   res.json({
     agents: [
-      { id: 'val',    role: 'Marketing & Communications Manager' },
-      { id: 'liv',    role: 'PR & Community Manager' },
-      { id: 'elena',  role: 'Story Editor & Character Developer' },
-      { id: 'giulia', role: 'Visual Director & Comic Producer' },
-      { id: 'tom',    role: 'Project Manager & Operations' }
+      { id: 'val',    name: 'VAL',    role: 'Marketing & Communications Manager' },
+      { id: 'liv',    name: 'LIV',    role: 'PR & Community Manager' },
+      { id: 'elena',  name: 'ELENA',  role: 'Story Editor & Character Developer' },
+      { id: 'giulia', name: 'GIULIA', role: 'Visual Director & Comic Producer' },
+      { id: 'tom',    name: 'TOM',    role: 'Project Manager & Operations' }
     ],
     total: 5
   });
