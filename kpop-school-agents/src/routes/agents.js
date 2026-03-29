@@ -1,24 +1,18 @@
 import express from 'express';
 import { runTom } from '../agents/tom.js';
-import { runSofia } from '../agents/sofia.js';
-import { runMarco } from '../agents/marco.js';
-import { runGiulia } from '../agents/giulia.js';
-import { runAndrea } from '../agents/andrea.js';
 import { runElena } from '../agents/elena.js';
-import { runChiara } from '../agents/chiara.js';
-import { runRob } from '../agents/rob.js';
-import { runMax } from '../agents/max.js';
-import { runFrancesca } from '../agents/francesca.js';
-import { runLiv } from '../agents/liv.js';
+import { runGiulia } from '../agents/giulia.js';
 import { runVal } from '../agents/val.js';
-import { runDavid } from '../agents/david.js';
+import { runLiv } from '../agents/liv.js';
 
 const router = express.Router();
 
 const agents = {
-  tom: runTom, sofia: runSofia, marco: runMarco, giulia: runGiulia,
-  andrea: runAndrea, elena: runElena, chiara: runChiara, rob: runRob,
-  max: runMax, francesca: runFrancesca, liv: runLiv, val: runVal, david: runDavid
+  tom: runTom,
+  elena: runElena,
+  giulia: runGiulia,
+  val: runVal,
+  liv: runLiv
 };
 
 // POST /api/agents/:name

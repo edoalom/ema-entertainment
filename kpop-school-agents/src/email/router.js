@@ -1,11 +1,6 @@
 import { runVal } from '../agents/val.js';
 import { runElena } from '../agents/elena.js';
-import { runSofia } from '../agents/sofia.js';
-import { runMarco } from '../agents/marco.js';
-import { runAndrea } from '../agents/andrea.js';
-import { runMax } from '../agents/max.js';
-import { runRob } from '../agents/rob.js';
-import { runDavid } from '../agents/david.js';
+import { runGiulia } from '../agents/giulia.js';
 import { runLiv } from '../agents/liv.js';
 import { runTom } from '../agents/tom.js';
 import { sendEmail } from './sender.js';
@@ -14,12 +9,12 @@ import { query } from '../core/db.js';
 
 const AGENT_MAP = {
   character_question: { agent: runElena, alias: 'elena', name: 'Elena' },
-  story_question:     { agent: runSofia, alias: 'sofia', name: 'Sofia' },
-  visual_question:    { agent: runMarco, alias: 'marco', name: 'Marco' },
-  music_question:     { agent: runAndrea, alias: 'andrea', name: 'Andrea' },
-  marketing_question: { agent: runMax, alias: 'max', name: 'Max' },
-  technical_question: { agent: runRob, alias: 'rob', name: 'Rob' },
-  community_question: { agent: runDavid, alias: 'david', name: 'David' },
+  story_question:     { agent: runElena, alias: 'elena', name: 'Elena' },
+  visual_question:    { agent: runGiulia, alias: 'giulia', name: 'Giulia' },
+  music_question:     { agent: runTom, alias: 'tom', name: 'Tom' },
+  marketing_question: { agent: runVal, alias: 'val', name: 'Val' },
+  technical_question: { agent: runTom, alias: 'tom', name: 'Tom' },
+  community_question: { agent: runLiv, alias: 'liv', name: 'Liv' },
   press_inquiry:      { agent: runLiv, alias: 'liv', name: 'Liv' },
   project_management: { agent: runTom, alias: 'tom', name: 'Tom' },
 };
@@ -31,7 +26,7 @@ export async function processEmails() {
   try {
     emails = await fetchNewEmails();
   } catch (err) {
-    console.error('[VAL] Errore IMAP:', err.message);
+    console.error('[VAL] Errore POP3:', err.message);
     return;
   }
 
