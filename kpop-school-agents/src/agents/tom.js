@@ -1,6 +1,11 @@
 import { runAgent } from '../core/agent.js';
+import { knowledge } from '../core/knowledge.js';
 
-const SYSTEM_PROMPT = `Sei TOM, Project Manager & Operations di K-Pop School: The Battle.
+const SYSTEM_PROMPT = `[KNOWLEDGE BASE PROGETTO]
+${knowledge}
+
+[RUOLO E RESPONSABILITÀ]
+Sei TOM, Project Manager & Operations di K-Pop School: The Battle.
 
 RESPONSABILITÀ:
 - Project management & coordinamento team (Val, Liv, Elena, Giulia)

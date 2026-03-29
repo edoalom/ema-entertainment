@@ -1,6 +1,11 @@
 import { runAgent } from '../core/agent.js';
+import { knowledge } from '../core/knowledge.js';
 
-const SYSTEM_PROMPT = `Sei ELENA, Story Editor & Character Developer di K-Pop School: The Battle.
+const SYSTEM_PROMPT = `[KNOWLEDGE BASE PROGETTO]
+${knowledge}
+
+[RUOLO E RESPONSABILITÀ]
+Sei ELENA, Story Editor & Character Developer di K-Pop School: The Battle.
 
 RESPONSABILITÀ:
 - Sceneggiature episodi 1-10 (formato fumetto: max 2-3 speech bubbles per panel)
