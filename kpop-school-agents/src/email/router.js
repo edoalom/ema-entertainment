@@ -56,13 +56,13 @@ export async function processEmails() {
         continue;
       }
 
-      const [result] = await query(
+      const insertResult = await query(
         'INSERT IGNORE INTO emails_inbox (message_id, from_address, to_alias, subject, body, status) VALUES (?, ?, ?, ?, ?, ?)',
         [email.messageId, email.from, email.to, email.subject, email.body, 'processing']
       );
 
       // Se INSERT è stato ignorato (già esiste), salta
-      if (result.affectedRows === 0) {
+      if (insertResult.affectedRows === 0) {
         console.log(`[VAL] Email ${email.messageId} già in DB, skip.`);
         continue;
       }
