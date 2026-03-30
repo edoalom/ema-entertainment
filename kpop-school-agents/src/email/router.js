@@ -8,12 +8,12 @@ import { fetchNewEmails } from './receiver.js';
 import { query } from '../core/db.js';
 
 const AGENT_MAP = {
-  story:     { agent: runElena, alias: 'elena', name: 'Elena' },
-  visual:    { agent: runGiulia, alias: 'giulia', name: 'Giulia' },
-  marketing: { agent: runVal, alias: 'val', name: 'Val' },
-  community: { agent: runLiv, alias: 'liv', name: 'Liv' },
-  press:     { agent: runLiv, alias: 'liv', name: 'Liv' },
-  operations:{ agent: runTom, alias: 'tom', name: 'Tom' },
+  story:     { agent: runElena, alias: 'elena', name: 'Elena', role: 'Story Editor & Character Developer' },
+  visual:    { agent: runGiulia, alias: 'giulia', name: 'Giulia', role: 'Visual Director & Comic Producer' },
+  marketing: { agent: runVal, alias: 'val', name: 'Val', role: 'Marketing & Communications Manager' },
+  community: { agent: runLiv, alias: 'liv', name: 'Liv', role: 'PR & Community Manager' },
+  press:     { agent: runLiv, alias: 'liv', name: 'Liv', role: 'PR & Community Manager' },
+  operations:{ agent: runTom, alias: 'tom', name: 'Tom', role: 'Project Manager & Operations' },
 };
 
 function detectCategory(email) {
@@ -88,11 +88,11 @@ REGOLE IMPORTANTI:
 - Puoi rispondere a domande generali sul progetto ma non distribuire materiale interno
 - Se richiesto materiale riservato, declina educatamente e rimanda a canali ufficiali
 
-Scrivi solo il corpo della risposta, senza firma.`,
+Scrivi solo il corpo della risposta, senza firma e senza saluti finali. La firma verrà aggiunta automaticamente dal sistema.`,
         null
       );
 
-      const signature = `-- ${agentConfig.name}\nK-Pop School: The Battle\n${agentConfig.alias}@kpopschool.it`;
+      const signature = `${agentConfig.name}\n${agentConfig.role}\nK-Pop School: The Battle\n${agentConfig.alias}@kpopschool.it`;
 
       await sendEmail({
         from: agentConfig.name,
