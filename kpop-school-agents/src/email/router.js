@@ -77,6 +77,7 @@ export async function processEmails() {
 
       const response = await agentConfig.agent(
         `Rispondi a questa email in modo professionale e cordiale.
+Sii breve (max 150 parole).
 Da: ${email.from}
 Oggetto: ${email.subject}
 Messaggio: ${email.body}
