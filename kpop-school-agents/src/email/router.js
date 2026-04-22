@@ -6,6 +6,7 @@ import { runTom } from '../agents/tom.js';
 import { sendEmail } from './sender.js';
 import { fetchNewEmails } from './receiver.js';
 import { query } from '../core/db.js';
+import { sendTelegramAlert } from '../core/telegram.js';
 
 const AGENT_MAP = {
   story:     { agent: runElena, alias: 'elena', name: 'Elena', role: 'Story Editor & Character Developer' },
@@ -75,6 +76,15 @@ export async function processEmails() {
         [category, agentConfig.alias, email.messageId]
       );
 
+      const preview = email.body.substring(0, 200).replace(/\n/g, ' ');
+      await sendTelegramAlert(
+        `📩 <b>Nuova email ricevuta</b>\n` +
+        `<b>Da:</b> ${email.from}\n` +
+        `<b>Oggetto:</b> ${email.subject}\n` +
+        `<b>Agente:</b> ${agentConfig.name} (${agentConfig.role})\n` +
+        `<b>Anteprima:</b> ${preview}${email.body.length > 200 ? '…' : ''}`
+      );
+
       const response = await agentConfig.agent(
         `Rispondi a questa email in modo professionale e cordiale.
 Sii breve (max 150 parole).
@@ -112,6 +122,12 @@ Scrivi solo il corpo della risposta, senza firma e senza saluti finali. La firma
 
       await query('UPDATE emails_inbox SET status = ? WHERE message_id = ?', ['replied', email.messageId]);
       console.log(`[VAL] Email da ${email.from} → ${agentConfig.name} → risposta inviata.`);
+      await sendTelegramAlert(
+        `✅ <b>Risposta inviata</b>\n` +
+        `<b>Agente:</b> ${agentConfig.name}\n` +
+        `<b>A:</b> ${email.from}\n` +
+        `<b>Oggetto:</b> Re: ${email.subject}`
+      );
 
     } catch (err) {
       console.error(`[VAL] Errore:`, err.message);
